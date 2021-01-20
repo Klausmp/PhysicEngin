@@ -1,0 +1,12 @@
+{
+  "name": "PhysicEngin",
+  "version": "0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "PhysicEngin": "echo \"Error: no PhysicEngin specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "klausmp",
+  "license": "ISC"
+}
