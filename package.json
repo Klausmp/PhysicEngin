@@ -1,10 +1,10 @@
 {
-  "name": "PhysicEngin",
-  "version": "0.1",
-  "description": "",
-  "main": "main.js",
+  "name": "pathVisulizer",
+  "version": "1.0",
+  "description": "Simple Path Finding Visulizer",
+  "main": "Main.js",
   "scripts": {
-    "PhysicEngin": "echo \"Error: no PhysicEngin specified\" && exit 1"
+    "pathVisulizer": "echo \"Error: no pathVisulizer specified\" && exit 1"
   },
   "keywords": [],
   "author": "klausmp",

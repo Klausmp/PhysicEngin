@@ -1,0 +1,70 @@
+.node {
+    position: absolute;
+    box-sizing: border-box;
+    background: #ffffff;
+    /*transition: all 0.2s ease-in-out;*/
+    border: 1px solid #000000;
+    border-radius: 7%;
+}
+
+.node.wall {
+    background: blue;
+    border: 1px solid #000000;
+}
+
+.node.road {
+    background: cyan;
+    border: 1px solid #000000;
+}
+
+.node.root {
+    background: green;
+    border: 1px solid #000000;
+}
+
+.node.target {
+    background: red;
+    border: 1px solid #000000;
+}
+
+.node.found {
+    background: orange;
+    border: 1px solid #000000;
+}
+
+.node.path {
+    height: 20px;
+    width: 20px;
+    margin: 0 auto;
+    background-color: lightgreen;
+    animation-name: stretch;
+    animation-duration: 750ms;
+    animation-timing-function: cubic-bezier(0, 1.16, 0.57, 0.87);
+    animation-delay: 30ms;
+    animation-direction: alternate;
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: none;
+    animation-play-state: running;
+    border: 1px solid #000000;
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(0.3);
+        background-color: cyan;
+        border-radius: 10%;
+    }
+    50% {
+        background-color: orange;
+    }
+    100% {
+        transform: scale(1);
+        background-color: lightgreen;
+    }
+}
+
+.grid {
+    position: absolute;
+    background: #fff;
+    border: 4px solid #000000;
+}
