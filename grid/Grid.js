@@ -70,6 +70,16 @@ class Grid {
         }
     }
 
+    removeAlgorithemTiles() {
+        grid.removePath();
+        grid.removeFound();
+    }
+
+    genNewPath() {
+        this.removeAlgorithemTiles();
+        aStar.run(targetTile.pos, rootTile.pos);
+    }
+
     init() {
         for (let x = 0; x < gridWight; x++) {
             for (let y = 0; y < gridHeigt; y++) {

@@ -40,7 +40,7 @@ function keyboardInput(event) {
 
     if (event.code === "KeyF") {
         if (rootTile != null && targetTile != null) {
-            genNewPath();
+            grid.genNewPath();
         }
     }
 
@@ -53,7 +53,7 @@ function keyboardInput(event) {
     }
 
     if (event.code === "KeyA") {
-        removeAlgorithemTiles()
+        grid.removeAlgorithemTiles()
     }
 
     if (event.code === "KeyS") {
@@ -61,12 +61,3 @@ function keyboardInput(event) {
     }
 }
 
-function removeAlgorithemTiles() {
-    grid.removePath();
-    grid.removeFound();
-}
-
-function genNewPath() {
-    removeAlgorithemTiles();
-    aStar.run(targetTile.pos, rootTile.pos);
-}
