@@ -8,6 +8,7 @@ class Grid {
         this.grid.addEventListener("click", ctrlClick);
         this.grid.style.width = wight + 2 + "px";
         this.grid.style.height = height + 2 + "px";
+        this.mouseClickType = 0;
         console.log(this.grid);
     }
 
@@ -78,6 +79,28 @@ class Grid {
     genNewPath() {
         this.removeAlgorithemTiles();
         aStar.run(targetTile.pos, rootTile.pos);
+    }
+
+    stepMouseClick() {
+        let changeButton = document.getElementById("changeButton");
+        this.mouseClickType++;
+        if (this.mouseClickType >= 4) {
+            this.mouseClickType = 0;
+        }
+        switch (this.mouseClickType) {
+            case 0:
+                changeButton.className = "changeButton " +changeButtonTypes.wall;
+                break;
+            case 1:
+                changeButton.className = "changeButton " +changeButtonTypes.road;
+                break
+            case 2:
+                changeButton.className = "changeButton " +changeButtonTypes.target;
+                break;
+            case 3:
+                changeButton.className = "changeButton " +changeButtonTypes.root;
+                break;
+        }
     }
 
     init() {

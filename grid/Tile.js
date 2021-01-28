@@ -1,8 +1,6 @@
 let rootTile = null;
 let targetTile = null;
 
-let TileTypes = { road : "road", found: "found", root: "root", target: "target", path: "path", wall: "wall"};
-
 class Tile {
     constructor(node) {
         this.node = node;
@@ -26,4 +24,3 @@ class Tile {
         this.node.className = 'node ' + type;
     }
 }
-

@@ -7,8 +7,8 @@
     border-radius: 7%;
 }
 
-button.find {
-
+.changeButton.wall {
+    background: blue;
 }
 
 .node.wall {
@@ -16,14 +16,26 @@ button.find {
     border: 1px solid #000000;
 }
 
+.changeButton.road {
+    background: cyan;
+}
+
 .node.road {
     background: cyan;
     border: 1px solid #000000;
 }
 
+.changeButton.root {
+    background: darkgreen;
+}
+
 .node.root {
     background: darkgreen;
     border: 1px solid #000000;
+}
+
+.changeButton.target {
+    background: red;
 }
 
 .node.target {
@@ -72,3 +84,4 @@ button.find {
     background: #fff;
     border: 4px solid #000000;
 }
+

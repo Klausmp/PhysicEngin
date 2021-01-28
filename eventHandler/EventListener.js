@@ -1,13 +1,21 @@
 normalClick = (event) => {
     if (event.target.classList.item(0) === "node") {
-        if (event.shiftKey === false && event.ctrlKey === false) {
-            tile = new Tile(event.target);
-            if (tile.firstType !== TileTypes.road) {
-                tile.changeType(TileTypes.road)
-                return;
-            }
-            tile.changeType(TileTypes.wall);
+        tile = new Tile(event.target);
+        switch (grid.mouseClickType) {
+            case 0:
+                tile.changeType(changeButtonTypes.wall);
+                break;
+            case 1:
+                tile.changeType(changeButtonTypes.road);
+                break
+            case 2:
+                tile.changeType(changeButtonTypes.target)
+                break;
+            case 3:
+                tile.changeType(changeButtonTypes.root);
+                break;
         }
+
     }
 }
 
