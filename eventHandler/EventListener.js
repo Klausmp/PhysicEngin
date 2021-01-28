@@ -1,5 +1,4 @@
 normalClick = (event) => {
-    console.log(event.target.className);
     if (event.target.classList.item(0) === "node") {
         if (event.shiftKey === false && event.ctrlKey === false) {
             tile = new Tile(event.target);
@@ -41,9 +40,7 @@ function keyboardInput(event) {
 
     if (event.code === "KeyF") {
         if (rootTile != null && targetTile != null) {
-            grid.removePath();
-            grid.removeFound();
-            aStar.run(targetTile.pos, rootTile.pos);
+            genNewPath();
         }
     }
 
@@ -56,11 +53,20 @@ function keyboardInput(event) {
     }
 
     if (event.code === "KeyA") {
-        grid.removePath();
-        grid.removeFound();
+        removeAlgorithemTiles()
     }
 
     if (event.code === "KeyS") {
         grid.scramble();
     }
+}
+
+function removeAlgorithemTiles() {
+    grid.removePath();
+    grid.removeFound();
+}
+
+function genNewPath() {
+    removeAlgorithemTiles();
+    aStar.run(targetTile.pos, rootTile.pos);
 }

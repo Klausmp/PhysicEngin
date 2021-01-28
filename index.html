@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<button class="button" type="button" onclick="grid.scramble()">Scramble Walls</button>
+<button class="button" type="button" onclick="removeAlgorithemTiles()">Remove Path and Found</button>
+<button class="button" type="button" onclick="grid.resetGrid()">ResetGrid</button>
+<button class="button" type="button" onclick="genNewPath()">New Path</button>
 <div class="grid"></div>
 <script src="util/Util.js"></script>
 <script src="algorithems/AStar.js"></script>

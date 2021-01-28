@@ -7,6 +7,10 @@
     border-radius: 7%;
 }
 
+button.find {
+
+}
+
 .node.wall {
     background: blue;
     border: 1px solid #000000;
@@ -18,7 +22,7 @@
 }
 
 .node.root {
-    background: green;
+    background: darkgreen;
     border: 1px solid #000000;
 }
 
@@ -36,7 +40,7 @@
     height: 20px;
     width: 20px;
     margin: 0 auto;
-    background-color: lightgreen;
+    background-color: yellow;
     animation-name: stretch;
     animation-duration: 750ms;
     animation-timing-function: cubic-bezier(0, 1.16, 0.57, 0.87);
@@ -59,7 +63,7 @@
     }
     100% {
         transform: scale(1);
-        background-color: lightgreen;
+        background-color: yellow;
     }
 }
 

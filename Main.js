@@ -7,6 +7,6 @@ const gridHeigt = height / tileSize;
 //console.log(gridWight +"gridWight");
 //console.log(gridHeigt +"gridHeight");
 
-document.addEventListener("keypress", keyboardInput);
 
 let grid = new Grid();
+document.addEventListener("keypress", keyboardInput);
