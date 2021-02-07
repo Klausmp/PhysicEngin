@@ -1,6 +1,6 @@
 {
   "name": "pathVisulizer",
-  "version": "1.2",
+  "version": "1.2.1",
   "description": "Simple Path Finding Visulizer",
   "main": "Main.js",
   "scripts": {

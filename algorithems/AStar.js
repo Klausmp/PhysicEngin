@@ -1,5 +1,4 @@
 class AStar {
-
     run = (targetPos, rootPos) => {
         let openList = [];
         let closedList = [];
@@ -66,6 +65,7 @@ class AStar {
             //tile.changeType(TileTypes.path);
             x = x.parent;
         }
+        path.reverse();
         return path;
     }
 
