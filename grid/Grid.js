@@ -78,7 +78,10 @@ class Grid {
 
     genNewPath() {
         this.removeAlgorithemTiles();
-        aStar.run(targetTile.pos, rootTile.pos);
+        let path = aStar.run(targetTile.pos, rootTile.pos);
+        if (path !== false) {
+            this.walkOverPath(path);
+        }
     }
 
     stepMouseClick() {
@@ -101,6 +104,16 @@ class Grid {
                 changeButton.className = "changeButton " +changeButtonTypes.root;
                 break;
         }
+    }
+
+    walkOverPath(path) {
+        path.forEach((tile, index) => {
+            (function (i) {
+                setTimeout(function () {
+                    tile.changeType(TileTypes.path);
+                }, 70 * index);
+            })(index);
+        });
     }
 
     init() {

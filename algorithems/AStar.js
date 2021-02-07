@@ -49,20 +49,24 @@ class AStar {
             }
             closedList.push(bestNode)
             openList = removeFromArray(openList, bestNode);
-            openList.sort(function (a, b) { return a.f-b.f});
+            openList.sort(function (a, b) {
+                return a.f - b.f
+            });
 
             if (closedList.find(node => node.compare(target)) === target) {
                 running = false;
             }
         }
 
+        let path = [];
         let x = target.parent;
         while (x !== root) {
             let tile = new Tile(grid.getNodeFromVectorFromGrid(x.pos));
-            tile.changeType(TileTypes.path);
+            path.push(tile);
+            //tile.changeType(TileTypes.path);
             x = x.parent;
         }
-        return true;
+        return path;
     }
 
     getSurroundings = (grid, node) => {
