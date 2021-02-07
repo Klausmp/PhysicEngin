@@ -78,7 +78,7 @@ class Grid {
 
     genNewPath() {
         this.removeAlgorithemTiles();
-        let path = aStar.run(targetTile.pos, rootTile.pos);
+        let path = alorithem.run(targetTile.pos, rootTile.pos);
         if (path !== false) {
             this.walkOverPath(path);
         }
@@ -92,16 +92,16 @@ class Grid {
         }
         switch (this.mouseClickType) {
             case 0:
-                changeButton.className = "changeButton " +changeButtonTypes.wall;
+                changeButton.className = "changeButton " +changeButtonTypes.wall +" material-icons";
                 break;
             case 1:
-                changeButton.className = "changeButton " +changeButtonTypes.road;
+                changeButton.className = "changeButton " +changeButtonTypes.road +" material-icons";
                 break
             case 2:
-                changeButton.className = "changeButton " +changeButtonTypes.target;
+                changeButton.className = "changeButton " +changeButtonTypes.target +" material-icons";
                 break;
             case 3:
-                changeButton.className = "changeButton " +changeButtonTypes.root;
+                changeButton.className = "changeButton " +changeButtonTypes.root +" material-icons";
                 break;
         }
     }
